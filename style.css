@@ -1,0 +1,389 @@
+@font-face {
+    font-family: Inter;
+    src: url(font/Inter-Regular-slnt=0.ttf);
+  }
+
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-Bold-slnt=0.ttf);
+    font-weight: bold;
+  }
+
+  html {
+      color: #222;
+      font-size: 1em;
+      line-height: 1.4;
+      font-family: Inter, 'segoe ui';
+      text-align: center;
+      --accent-color: #0084ff;
+      --light-color: rgb(240, 240, 240);
+      --dark-color: rgb(27, 27, 27);
+      scroll-behavior: smooth;
+    }
+
+    ::-moz-selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-stretch: expanded;
+    }
+
+    li {
+      float: left;
+      padding: 5px 5px;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .nohovr {
+      color: black;
+      border-radius: 10px;
+      transition: background-color .25s, border-radius .5s, color .25s;
+      transition-delay: .1s, .1s, .1s;
+      transition-property: background-color, border-radius, color;
+    }
+    .nohovr:hover {
+      border-radius: 10px;
+      background: linear-gradient(to bottom right, #0084ff, #00bfff);
+      color: white;
+      text-decoration: none !important;
+      border-radius: 7px;
+    }
+
+    .hvrovr {
+      background-color: var(--accent-color) !important;
+      transition: border-radius .5s;
+      transition-timing-function: ease-in-out;
+      color: white;
+      background: linear-gradient(to bottom right, #0084ff, #00bfff);
+    }
+
+    .hvrovr:hover {
+      text-decoration: none !important;
+      border-radius: 7px;
+      border: 16px 18px;
+      background-color: #007ff5;
+      box-shadow: inset 5px 5px 19px #007ff5,
+            inset -5px -5px 19px #0089ff;
+    }
+
+    .myprojects {
+      background-color: var(--light-color);
+    }
+
+    img {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    p h1 {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    .githubIcon {
+      width: 25px;
+      height: 25px;
+      margin: 45px;
+    }
+
+    .footnotes {
+      padding: 30px 30%;
+      font-size: 1em;
+      background: var(--light-color);
+    }
+
+    iframe {
+      margin: 35px;
+    }
+
+    a {
+      color: #0084ff;
+      transition: text-decoration .5s;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .blogp {
+      margin: 0% 20%;
+    }
+
+    #aboutsitep {
+      margin: 0% 20%;
+    }
+
+
+    @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: white;
+    }
+
+    .footnotes {
+      background: var(--dark-color);
+    }
+
+    .hvrovr {
+      color: white;
+    }
+
+    .myprojects {
+      background-color: var(--dark-color);
+    }
+
+    .nohovr {
+      color: #cacaca;
+    }
+
+    .notice {
+      background-color: #404040;
+    }
+
+    #betanotice {
+      visibility: visible !important;
+    }
+
+    ::selection {
+      color: black;
+      background: white;
+    }
+
+    .myprojects {
+      color: white;
+    }
+
+    }
+
+.section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex !important;
+}
+
+  .title {
+    padding: 28% 20% 0% 0% !important;
+  }
+
+  .body1 {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 32%;
+    padding-right: 15%;
+    padding-bottom: 25%;
+  }
+
+  .body2 {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 32%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+  }
+
+  .notice {
+    padding: 5px;
+    font-size: 11px;
+    margin: 0px;
+  }
+
+  #betanotice {
+    visibility: hidden;
+  }
+
+  #project1 {
+    text-align: left;
+    width: 315px;
+    margin: auto;
+  }
+
+  #project2 {
+    width: 315px;
+    margin: auto;
+    text-align: left;
+  }
+
+/*desktop*/
+@media only screen and (max-width: 1655px) {
+   .body1{
+    padding-left: 25%;
+   }
+   .body2{
+    padding-left: 25%;
+   }
+  }
+
+  @media only screen and (max-width: 1360px) {
+   .body1{
+    padding-left: 20%;
+   }
+   .body2{
+    padding-left: 20%;
+    padding-bottom: 50px;
+   }
+  }
+
+
+/* For small laptops */
+  @media only screen and (max-width: 980px) {
+    .body1 {
+      margin-left: 1px;
+      padding-left: 50px;
+      padding-bottom: 50px;
+    }
+    .body2 {
+        margin-left: 1px;
+        padding-left: 50px;
+      }
+
+    #project1 {
+    margin: 20px;
+    width: 1000px;
+  }
+
+   #project2 {
+    margin: 20px;
+    width: 1000px;
+   }
+  }
+
+  @media only screen and (max-width: 670px) {
+    .footnotes {
+      padding: 30px 25%;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    .footnotes {
+      padding: 30px 20%;
+    }
+
+    li a {
+      padding: 18px 20px;
+    }
+
+    .body1 {
+      padding: 10px;
+      padding-bottom: 40px;
+    }
+
+    .body2 {
+      padding: 10px;
+      padding-bottom: 40px;
+    }
+
+    #project1 {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+
+  #project2 {
+    width: 300px;
+    margin: auto;
+  }
+
+    .section {
+      flex-direction: column;
+    }
+
+  }
+
+  @media only screen and (max-width: 435px) {
+    .footnotes {
+      padding: 30px 10%;
+    }
+
+    #project1 {
+    width: 200px;
+  }
+
+   #project2 {
+    width: 200px;
+   }
+  }
+
+  @media only screen and (max-width: 317px) {
+  }
+
+  @media only screen and (max-width: 270px) {
+    #project1 {
+    width: 150px;
+  }
+
+   #project2 {
+    width: 150px;
+   }
+  }
+
+  #projectheadder {
+    text-align: center;
+  }
+.logo {
+  height: 100px;
+  width: auto;
+  margin: 0px;
+  padding: 0;
+}
+
+.myprojects {
+  border-radius: 20px;
+  padding: 15px 20px;
+}
+
+a {
+  color: var(--accent-color);
+}
+
+.footnotes {
+  border-radius: 20px;
+  color: gray;
+}
+
+@media only screen and (max-width: 1050px) {
+    .header {
+      height: 50px;
+      margin: 2px;
+    } 
+  }
+
+  
+  .titlesection {
+    margin: 0%;
+  }
+
+  #announcements {
+    background: linear-gradient(to right, #0084ff, #00bfff);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  #notblue {
+    color: white;
+    text-decoration: underline;
+  }
+
+  #notblue:hover {
+    text-decoration: none;
+    color:rgb(27, 27, 27);
+  }

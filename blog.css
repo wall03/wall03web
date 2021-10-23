@@ -1,0 +1,192 @@
+.blog {
+    background-color: var(--light-color);
+  }
+
+  img {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  p h1 {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .githubIcon {
+    width: 25px;
+    height: 25px;
+    margin: 45px;
+  }
+
+  .footnotes {
+    padding: 30px 30%;
+    font-size: 1em;
+    background: var(--light-color);
+    text-align: center;
+  }
+
+  iframe {
+    margin: 35px;
+  }
+
+  a {
+    color: #0084ff;
+    transition: text-decoration .5s;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .blogp {
+    margin: 0% 20%;
+  }
+
+  #aboutsitep {
+    margin: 0% 20%;
+  }
+
+  
+.myprojects {
+border-radius: 20px;
+padding: 20px;
+background: var(--light-color);
+float: left;
+margin-left: 10px !important;
+margin-top: 40px !important;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .blog {
+    background-color: rgb(27, 27, 27);
+  }
+
+  .myprojects {
+    background-color: rgb(27, 27, 27);
+  }
+
+  .footnotes {
+    background-color: rgb(27, 27, 27);
+  }
+
+}
+
+.body1 {
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 32%;
+  padding-right: 15%;
+  padding-bottom: 20%;
+}
+
+.body2 {
+  text-align: left;
+  padding-left: 260px;
+  padding-right: 20px;
+  padding-bottom: 7%;
+}
+
+#project1 {
+  width: 200px;
+}
+
+
+@media only screen and (max-width: 1360px) {
+ .body1{
+  padding-left: 20%;
+ }
+ .body2{
+  padding-bottom: 50px;
+ }
+}
+
+/* For small laptops */
+@media only screen and (max-width: 980px) {
+  .body1 {
+    margin-left: 1px;
+    padding-left: 50px;
+  }
+  
+ #project1 {
+   width: 150px;
+ }
+
+ .body2 {
+   padding-bottom: 7%;
+   padding-left: 210px;
+ }
+}
+
+@media only screen and (max-width: 775px) {
+  #project1{
+    float: none;
+    width: auto;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .body2 {
+    padding-left: 10px;
+    padding-bottom: 0px;
+  }
+
+  .blog {
+    padding: 1px 15px 22px 15px !important;
+  }
+
+  #tags {
+    font-size: 2em !important;
+    color: var(--accent-color)
+  }
+}
+
+img {
+  display: block;
+  float: right;
+  width: 133px;
+  height: 100px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 580px) {
+  .body1 {
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  .body2 {
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 15px 0px;
+  }
+
+}
+
+#tags {
+margin-top: 0px;
+}
+
+.blog {
+  padding: 5px 5px 22px 20px;
+  border-radius: 20px;
+  margin: 10px;
+  min-height: 100px;
+}
+
+h6{
+  margin: 0px 0px 7px 0px;
+  font-weight: normal;
+}
+
+h1{
+  margin-bottom: 3px;
+}
