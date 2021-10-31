@@ -12,19 +12,6 @@
     margin-right: 100px;
   }
 
-  .githubIcon {
-    width: 25px;
-    height: 25px;
-    margin: 45px;
-  }
-
-  .footnotes {
-    padding: 30px 30%;
-    font-size: 1em;
-    background: var(--light-color);
-    text-align: center;
-  }
-
   iframe {
     margin: 35px;
   }
@@ -60,32 +47,19 @@ margin-top: 40px !important;
 
 @media (prefers-color-scheme: dark) {
   .blog {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--dark-color);
   }
 
   .myprojects {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--dark-color);
   }
 
-  .footnotes {
-    background-color: rgb(27, 27, 27);
-  }
-
-}
-
-.body1 {
-  text-align: left;
-  padding-top: 10px;
-  padding-left: 32%;
-  padding-right: 15%;
-  padding-bottom: 20%;
 }
 
 .body2 {
   text-align: left;
   padding-left: 260px;
-  padding-right: 20px;
-  padding-bottom: 7%;
+  padding-right: 5px;
 }
 
 #project1 {
@@ -94,21 +68,14 @@ margin-top: 40px !important;
 
 
 @media only screen and (max-width: 1360px) {
- .body1{
-  padding-left: 20%;
- }
  .body2{
   padding-bottom: 50px;
  }
 }
 
 /* For small laptops */
-@media only screen and (max-width: 980px) {
-  .body1 {
-    margin-left: 1px;
-    padding-left: 50px;
-  }
-  
+@media only screen and (max-width: 1080px) {
+
  #project1 {
    width: 150px;
  }
@@ -152,11 +119,6 @@ img {
 }
 
 @media only screen and (max-width: 580px) {
-  .body1 {
-    padding: 10px;
-    padding-bottom: 40px;
-  }
-
   .body2 {
     padding: 10px;
     padding-bottom: 40px;

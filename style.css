@@ -14,11 +14,11 @@
       font-size: 1em;
       line-height: 1.4;
       font-family: Inter, 'segoe ui';
-      text-align: center;
       --accent-color: #0084ff;
       --light-color: rgb(240, 240, 240);
-      --dark-color: rgb(27, 27, 27);
+      --dark-color: #0e141d;
       scroll-behavior: smooth;
+      text-align: center;
     }
 
     ::-moz-selection {
@@ -83,6 +83,14 @@
             inset -5px -5px 19px #0089ff;
     }
 
+    #homentxt {
+      background-color: rgba(270, 270, 270, 0.9);
+    }
+
+    .mythings {
+      background-color: var(--light-color);
+    }
+
     .myprojects {
       background-color: var(--light-color);
     }
@@ -95,12 +103,6 @@
     p h1 {
       margin-left: 100px;
       margin-right: 100px;
-    }
-
-    .githubIcon {
-      width: 25px;
-      height: 25px;
-      margin: 45px;
     }
 
     .footnotes {
@@ -134,7 +136,7 @@
 
     @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212;
+        background-color: #0a0f16;
         color: white;
     }
 
@@ -142,6 +144,9 @@
       background: var(--dark-color);
     }
 
+    .mythings {
+      background-color: var(--dark-color);
+    }
     .hvrovr {
       color: white;
     }
@@ -164,9 +169,7 @@
 
     ::selection {
       color: black;
-      background: white;
     }
-
     .myprojects {
       color: white;
     }
@@ -244,16 +247,20 @@
 
 
 /* For small laptops */
-  @media only screen and (max-width: 980px) {
+  @media only screen and (max-width: 1080px) {
     .body1 {
       margin-left: 1px;
-      padding-left: 50px;
+      padding: 50px;
       padding-bottom: 50px;
     }
+
+    .title {
+      padding-top: 100px !important;
+    }
     .body2 {
-        margin-left: 1px;
-        padding-left: 50px;
-      }
+      margin-left: 1px;
+      padding-left: 50px;
+    }
 
     #project1 {
     margin: 20px;
@@ -386,4 +393,27 @@ a {
   #notblue:hover {
     text-decoration: none;
     color:rgb(27, 27, 27);
+  }
+
+  .mythings {
+    padding: 20px;
+    height: 100%;
+    border-radius: 20px;
+    text-align: left;
+    margin: 20px;
+  }
+
+  #homent {
+    background-image: url("img/IMG_9294.JPG");
+    background-position-y: -150px;
+    background-position-x: -200px;
+    background-attachment: fixed;
+    border-radius: 20px;
+    padding: 70px 20px;
+  }
+
+  #homentxt {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
   }
