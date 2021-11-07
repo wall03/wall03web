@@ -13,7 +13,7 @@
       color: #222;
       font-size: 1em;
       line-height: 1.4;
-      font-family: Inter, 'segoe ui';
+      font-family: Inter, Helvetica, sans-serif;
       --accent-color: #0084ff;
       --light-color: rgb(240, 240, 240);
       --dark-color: #0e141d;
@@ -60,7 +60,7 @@
     }
     .nohovr:hover {
       border-radius: 10px;
-      background: linear-gradient(to bottom right, #0084ff, #00bfff);
+      background: var(--light-color);
       color: white;
       text-decoration: none !important;
       border-radius: 7px;
@@ -83,13 +83,6 @@
             inset -5px -5px 19px #0089ff;
     }
 
-    #homentxt {
-      background-color: rgba(270, 270, 270, 0.9);
-    }
-
-    .mythings {
-      background-color: var(--light-color);
-    }
 
     .myprojects {
       background-color: var(--light-color);
@@ -133,11 +126,25 @@
       margin: 0% 20%;
     }
 
+    #announcements {
+      background-color: var(--light-color);
+    }
+
+    #announcements {
+      background-color: var(--light-color);
+    }
 
     @media (prefers-color-scheme: dark) {
+    #announcements {
+      background-color: var(--dark-color);
+    }
     body {
-        background-color: #0a0f16;
-        color: white;
+      background-color: #0a0f16;
+      color: white;
+    }
+
+    .nohovr:hover{
+      background: var(--dark-color);
     }
 
     .footnotes {
@@ -379,41 +386,6 @@ a {
   }
 
   #announcements {
-    background: linear-gradient(to right, #0084ff, #00bfff);
     padding: 15px;
-    border-radius: 10px;
-    color: white;
-  }
-
-  #notblue {
-    color: white;
-    text-decoration: underline;
-  }
-
-  #notblue:hover {
-    text-decoration: none;
-    color:rgb(27, 27, 27);
-  }
-
-  .mythings {
-    padding: 20px;
-    height: 100%;
-    border-radius: 20px;
-    text-align: left;
-    margin: 20px;
-  }
-
-  #homent {
-    background-image: url("img/IMG_9294.JPG");
-    background-position-y: -150px;
-    background-position-x: -200px;
-    background-attachment: fixed;
-    border-radius: 20px;
-    padding: 70px 20px;
-  }
-
-  #homentxt {
-    padding: 10px;
-    width: 200px;
     border-radius: 10px;
   }

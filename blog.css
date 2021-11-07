@@ -35,14 +35,14 @@
   }
 
   
-.myprojects {
-border-radius: 20px;
-padding: 20px;
-background: var(--light-color);
-float: left;
-margin-left: 10px !important;
-margin-top: 40px !important;
-}
+  .myprojects {
+    border-radius: 20px;
+    padding: 20px;
+    background: var(--light-color);
+    float: left;
+    margin-left: 10px !important;
+    margin-top: 40px !important;
+  }
 
 
 @media (prefers-color-scheme: dark) {
@@ -66,6 +66,22 @@ margin-top: 40px !important;
   width: 200px;
 }
 
+.blog {
+  padding: 5px 5px 22px 20px;
+  border-radius: 20px;
+  margin: 10px 10px 20px 10px;
+  min-height: 100px;
+}
+
+h6{
+  margin: 0px 0px 7px 0px;
+  font-weight: normal;
+}
+
+h1{
+  margin-bottom: 3px;
+  margin-top: 10px;
+}
 
 @media only screen and (max-width: 1360px) {
  .body2{
@@ -73,16 +89,19 @@ margin-top: 40px !important;
  }
 }
 
-/* For small laptops */
+/* "compact view" */
 @media only screen and (max-width: 1080px) {
-
  #project1 {
    width: 150px;
  }
 
  .body2 {
    padding-bottom: 7%;
-   padding-left: 210px;
+   padding-left: 200px;
+ }
+
+ .blog {
+   margin: 10px;
  }
 }
 
@@ -90,16 +109,12 @@ margin-top: 40px !important;
   #project1{
     float: none;
     width: auto;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 20px !important;
   }
 
   .body2 {
     padding-left: 10px;
     padding-bottom: 0px;
-  }
-
-  .blog {
-    padding: 1px 15px 22px 15px !important;
   }
 
   #tags {
@@ -118,6 +133,7 @@ img {
   border-radius: 20px;
 }
 
+/* big images */
 @media only screen and (max-width: 580px) {
   .body2 {
     padding: 10px;
@@ -131,24 +147,14 @@ img {
     margin: 15px 0px;
   }
 
+  .blog {
+    padding: 1px 15px 15px 15px !important;
+    margin: 10px 10px 20px 10px;
+  }
+
 }
 
 #tags {
-margin-top: 0px;
+  margin-top: 0px;
 }
 
-.blog {
-  padding: 5px 5px 22px 20px;
-  border-radius: 20px;
-  margin: 10px;
-  min-height: 100px;
-}
-
-h6{
-  margin: 0px 0px 7px 0px;
-  font-weight: normal;
-}
-
-h1{
-  margin-bottom: 3px;
-}
