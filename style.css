@@ -220,16 +220,10 @@
     visibility: hidden;
   }
 
-  #project1 {
+  .myprojects {
     text-align: left;
     width: 315px;
     margin: auto;
-  }
-
-  #project2 {
-    width: 315px;
-    margin: auto;
-    text-align: left;
   }
 
 /*desktop*/
@@ -259,7 +253,7 @@
 
 
 /* For small laptops */
-  @media only screen and (max-width: 1080px) {
+  @media only screen and (max-width: 1158px) {
     .body1 {
       margin-left: 1px;
       padding: 50px;
@@ -274,20 +268,40 @@
       padding-left: 50px;
     }
 
-    #project1 {
+    .myprojects {
     margin: 20px;
     width: 1000px;
   }
+  }
+  @media only screen and (max-width: 845px) {
+    .myprojects {
+      margin: 10px;
+    }
+  }
 
-   #project2 {
-    margin: 20px;
-    width: 1000px;
-   }
+  @media only screen and (max-width: 805px) {
+    .myprojects {
+      margin: 5px;
+    }
   }
 
   @media only screen and (max-width: 670px) {
-    .footnotes {
-      padding: 30px 25%;
+    .section {
+      display: block !important;
+      margin: 15px;
+    }
+    
+    .myprojects {
+      width: 500px;
+      margin: 20px auto;
+    }
+
+    .body1 {
+      padding: 30px;
+    }
+
+    .body2 {
+      padding: 30px;
     }
   }
 
@@ -310,15 +324,10 @@
       padding-bottom: 40px;
     }
 
-    #project1 {
+    .myprojects {
     margin: auto;
     margin-bottom: 20px;
     width: 300px;
-  }
-
-  #project2 {
-    width: 300px;
-    margin: auto;
   }
 
     .section {
@@ -332,26 +341,18 @@
       padding: 30px 10%;
     }
 
-    #project1 {
+    .myprojects {
     width: 200px;
   }
-
-   #project2 {
-    width: 200px;
-   }
   }
 
   @media only screen and (max-width: 317px) {
   }
 
   @media only screen and (max-width: 270px) {
-    #project1 {
+    .myprojects {
     width: 150px;
   }
-
-   #project2 {
-    width: 150px;
-   }
   }
 
   #projectheadder {
