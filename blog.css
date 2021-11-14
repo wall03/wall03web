@@ -36,12 +36,12 @@
 
   
   .myprojects {
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 20px;
     background: var(--light-color);
     float: left;
     margin-left: 10px !important;
-    margin-top: 40px !important;
+    margin-top: 44px !important;
   }
 
 
@@ -68,7 +68,7 @@
 
 .blog {
   padding: 5px 5px 22px 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 10px 10px 20px 10px;
   min-height: 100px;
 }
@@ -130,13 +130,13 @@ img {
   height: 100px;
   margin: 10px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /* big images */
 @media only screen and (max-width: 580px) {
   .body2 {
-    padding: 10px;
+    padding: 0px 10px;
     padding-bottom: 40px;
   }
 
@@ -158,3 +158,4 @@ img {
   margin-top: 0px;
 }
 
+/* test */

@@ -197,7 +197,7 @@
   .body1 {
     text-align: left;
     padding-top: 10px;
-    padding-left: 32%;
+    padding-left: 28%;
     padding-right: 15%;
     padding-bottom: 25%;
   }
@@ -207,7 +207,7 @@
     padding-top: 10px;
     padding-left: 32%;
     padding-right: 15%;
-    padding-bottom: 5%;
+    padding-bottom: 200px;
   }
 
   .notice {
@@ -233,10 +233,15 @@
   }
 
 /*desktop*/
-@media only screen and (max-width: 1655px) {
+@media only screen and (max-width: 1855px) {
    .body1{
     padding-left: 25%;
    }
+
+   .title {
+    padding-top: 250px !important;
+  }
+
    .body2{
     padding-left: 25%;
    }
@@ -360,7 +365,7 @@
 }
 
 .myprojects {
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 15px 20px;
 }
 
@@ -369,7 +374,7 @@ a {
 }
 
 .footnotes {
-  border-radius: 20px;
+  border-radius: 15px;
   color: gray;
 }
 
