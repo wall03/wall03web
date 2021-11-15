@@ -61,14 +61,12 @@
     .nohovr:hover {
       border-radius: 10px;
       background: var(--light-color);
-      color: white;
       text-decoration: none !important;
       border-radius: 7px;
     }
 
     .hvrovr {
-      background-color: var(--accent-color) !important;
-      transition: border-radius .5s;
+      transition: background-color .25s, border-radius .5s;
       transition-timing-function: ease-in-out;
       color: white;
       background: linear-gradient(to bottom right, #0084ff, #00bfff);
@@ -77,12 +75,13 @@
     .hvrovr:hover {
       text-decoration: none !important;
       border-radius: 7px;
-      border: 16px 18px;
-      background-color: #007ff5;
-      box-shadow: inset 5px 5px 19px #007ff5,
-            inset -5px -5px 19px #0089ff;
+      background-color: #1086f5;
     }
 
+    #more {
+      padding: 8px 18px;
+      font-size: 1.5em;
+    }
 
     .myprojects {
       background-color: var(--light-color);
@@ -145,6 +144,7 @@
 
     .nohovr:hover{
       background: var(--dark-color);
+      color: white;
     }
 
     .footnotes {
@@ -312,6 +312,10 @@
 
     li a {
       padding: 18px 20px;
+    }
+
+    #more {
+      padding: 12px 22px;
     }
 
     .body1 {
