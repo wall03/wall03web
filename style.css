@@ -21,6 +21,17 @@
       text-align: center;
     }
 
+     /* Hide scrollbar for Chrome, Safari and Opera */
+    html::-webkit-scrollbar {
+      display: none;
+}
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    html {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    } 
+
     ::-moz-selection {
       background: #b3d4fc;
       text-shadow: none;
@@ -87,6 +98,13 @@
       background-color: var(--light-color);
     }
 
+    .projectimg {
+      height: 0px;
+      width: 0px;
+      margin: 0px;
+      float: right;
+    }
+
     img {
       margin-left: 100px;
       margin-right: 100px;
@@ -98,7 +116,7 @@
     }
 
     .footnotes {
-      padding: 30px 30%;
+      padding: 30px;
       font-size: 1em;
       background: var(--light-color);
     }
@@ -191,7 +209,7 @@
 }
 
   .title {
-    padding: 28% 20% 0% 0% !important;
+    padding: 28% 20% 0% 0%;
   }
 
   .body1 {
@@ -205,7 +223,7 @@
   .body2 {
     text-align: left;
     padding-top: 10px;
-    padding-left: 32%;
+    padding-left: 28%;
     padding-right: 15%;
     padding-bottom: 200px;
   }
@@ -226,14 +244,28 @@
     margin: auto;
   }
 
+  @media only screen and (min-width: 1360px) {
+    .projectimg {
+      width: auto;
+      height: 50px;
+      border-radius: 10px;
+      margin: 0px 0px 0px 10px;
+    }
+
+    .myprojects {
+      width: 100%;
+      margin: 20px;
+    }
+  }
+
 /*desktop*/
-@media only screen and (max-width: 1855px) {
+@media only screen and (max-width: 1875px) {
    .body1{
     padding-left: 25%;
    }
 
    .title {
-    padding-top: 250px !important;
+    padding-top: 250px;
   }
 
    .body2{
@@ -273,7 +305,7 @@
     width: 1000px;
   }
   }
-  @media only screen and (max-width: 845px) {
+  @media only screen and (max-width: 960px) {
     .myprojects {
       margin: 10px;
     }
@@ -306,10 +338,6 @@
   }
 
   @media only screen and (max-width: 580px) {
-    .footnotes {
-      padding: 30px 20%;
-    }
-
     li a {
       padding: 18px 20px;
     }
@@ -341,47 +369,63 @@
   }
 
   @media only screen and (max-width: 435px) {
-    .footnotes {
-      padding: 30px 10%;
-    }
-
     .myprojects {
     width: 200px;
   }
   }
 
-  @media only screen and (max-width: 317px) {
+  @media only screen and (max-width: 390px) {
+    li a {
+      padding: 15px;
+    }
   }
 
-  @media only screen and (max-width: 270px) {
-    .myprojects {
-    width: 150px;
+  #announcements {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 5px 10px 5px;
+  }
+
+  /* S21 screen size */
+  @media only screen and (max-width: 355px) {
+    .footnotes {
+      padding: 30px 19px;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #announcements {
+      font-size: .9em;
+    }
+  }
+
+  /* iPhone 5s screen size */
+  @media only screen and (max-width: 320px) {
+  #announcements {
+    font-size: 1em;
   }
   }
 
   #projectheadder {
     text-align: center;
   }
-.logo {
-  height: 100px;
-  width: auto;
-  margin: 0px;
-  padding: 0;
-}
 
-.myprojects {
-  border-radius: 15px;
-  padding: 15px 20px;
-}
+  .myprojects {
+    border-radius: 15px;
+    padding: 15px 20px;
+  }
 
-a {
-  color: var(--accent-color);
-}
+  a {
+    color: var(--accent-color);
+  }
 
-.footnotes {
-  border-radius: 15px;
-  color: gray;
-}
+  .footnotes {
+    border-radius: 15px;
+    color: gray;
+  }
 
 @media only screen and (max-width: 1050px) {
     .header {
@@ -393,9 +437,4 @@ a {
   
   .titlesection {
     margin: 0%;
-  }
-
-  #announcements {
-    padding: 15px;
-    border-radius: 10px;
   }

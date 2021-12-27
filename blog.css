@@ -1,3 +1,8 @@
+html {
+  --lighter-color: rgb(228, 228, 228);
+  --darker-color: #1f293ab9;
+}
+
 .blog {
     background-color: var(--light-color);
   }
@@ -44,6 +49,25 @@
     margin-top: 44px !important;
   }
 
+  
+  span {
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: .3em;
+    font-weight: normal;
+    background-color: var(--lighter-color);
+  }
+
+  span:hover {
+    border: lightblue solid 2px;
+    padding: 3px;
+  }
+
+  h6 {
+    margin: 0px 0px 7px 0px;
+    font-weight: normal;
+  }
 
 @media (prefers-color-scheme: dark) {
   .blog {
@@ -53,7 +77,9 @@
   .myprojects {
     background-color: var(--dark-color);
   }
-
+  span {
+    background-color: var(--darker-color);
+  }
 }
 
 .body2 {
@@ -73,10 +99,6 @@
   min-height: 100px;
 }
 
-h6{
-  margin: 0px 0px 7px 0px;
-  font-weight: normal;
-}
 
 h1{
   margin-bottom: 3px;
@@ -93,11 +115,12 @@ h1{
 @media only screen and (max-width: 1080px) {
  #project1 {
    width: 150px;
+   padding: 15px 15px 15px 20px;
  }
 
  .body2 {
    padding-bottom: 7%;
-   padding-left: 200px;
+   padding-left: 195px;
  }
 
  .blog {
@@ -105,6 +128,7 @@ h1{
  }
 }
 
+/* Tags is long */
 @media only screen and (max-width: 775px) {
   #project1{
     float: none;
