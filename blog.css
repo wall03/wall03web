@@ -1,185 +1,21 @@
-html {
-  --lighter-color: rgb(228, 228, 228);
-  --darker-color: #1f293ab9;
+.blogtitle {
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.5em;
+  padding: 10px 0px 0px 0px;
 }
 
-.blog {
-    background-color: var(--light-color);
-  }
-
-  img {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-  p h1 {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-  iframe {
-    margin: 35px;
-  }
-
-  a {
-    color: #0084ff;
-    transition: text-decoration .5s;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  .blogp {
-    margin: 0% 20%;
-  }
-
-  #aboutsitep {
-    margin: 0% 20%;
-  }
-
-  
-  .myprojects {
-    border-radius: 15px;
-    padding: 20px;
-    background: var(--light-color);
-    float: left;
-    margin-left: 10px !important;
-    margin-top: 44px !important;
-  }
-
-  
-  span {
-    padding: 5px;
-    border-radius: 3px;
-    margin-left: 5px;
-    font-size: .3em;
-    font-weight: normal;
-    background-color: var(--lighter-color);
-  }
-
-  span:hover {
-    border: lightblue solid 2px;
-    padding: 3px;
-  }
-
-  h6 {
-    margin: 0px 0px 7px 0px;
-    font-weight: normal;
-  }
-
-@media (prefers-color-scheme: dark) {
-  .blog {
-    background-color: var(--dark-color);
-  }
-
-  .myprojects {
-    background-color: var(--dark-color);
-  }
-  span {
-    background-color: var(--darker-color);
-  }
-}
-
-.body2 {
-  text-align: left;
-  padding-left: 260px;
-  padding-right: 5px;
-}
-
-#project1 {
-  width: 200px;
-}
-
-.blog {
-  padding: 5px 5px 22px 20px;
-  border-radius: 15px;
-  margin: 10px 10px 20px 10px;
-  min-height: 100px;
-}
-
-
-h1{
-  margin-bottom: 3px;
-  margin-top: 10px;
-}
-
-@media only screen and (max-width: 1360px) {
- .body2{
-  padding-bottom: 50px;
- }
-}
-
-/* "compact view" */
-@media only screen and (max-width: 1080px) {
- #project1 {
-   width: 150px;
-   padding: 15px 15px 15px 20px;
- }
-
- .body2 {
-   padding-bottom: 7%;
-   padding-left: 195px;
- }
-
- .blog {
-   margin: 10px;
- }
-}
-
-/* Tags is long */
-@media only screen and (max-width: 775px) {
-  #project1{
-    float: none;
-    width: auto;
-    margin: 0px 20px 0px 20px !important;
-  }
-
-  .body2 {
-    padding-left: 10px;
-    padding-bottom: 0px;
-  }
-
-  #tags {
-    font-size: 2em !important;
-    color: var(--accent-color)
-  }
-}
-
-img {
-  display: block;
-  float: right;
-  width: 133px;
-  height: 100px;
-  margin: 10px;
-  overflow: hidden;
+.blogimg {
+  width: 100%;
+  height: 300px;
   border-radius: 10px;
 }
 
-/* big images */
-@media only screen and (max-width: 580px) {
-  .body2 {
-    padding: 0px 10px;
-    padding-bottom: 40px;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    margin: 15px 0px;
-  }
-
-  .blog {
-    padding: 1px 15px 15px 15px !important;
-    margin: 10px 10px 20px 10px;
-  }
-
+.card {
+  padding: 30px;
+  width: 520px;
 }
 
-#tags {
-  margin-top: 0px;
+h2 {
+  margin: 0px!important;
 }
-
-/* test */
