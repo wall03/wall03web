@@ -1,0 +1,155 @@
+@media only screen and (prefers-color-scheme: light) {
+	body {
+		background: #bae2ff;
+		max-width: 1200px;
+		margin: 50px auto;
+	}
+	@media only screen and (max-width: 1300px) {
+		body {
+			margin: 50px;
+		}
+	}
+	button {
+		outline: none;
+		border: none;
+	}
+	a {
+		text-decoration: none;
+		color: #2d9cdb;
+	}
+
+	#nav {
+		z-index: 999999;
+		background-color: #ddf1ff;
+		position: fixed;
+		top: 50px;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	@media only screen and (max-width: 940px) {
+		#nav {
+			position: inherit;
+			width: max-content;
+			margin: 50px auto 0px;
+		}
+	}
+	#nav button {
+		background: none;
+		padding: 17px 23px;
+		color: #000;
+		font-weight: 400;
+		font-size: 16px;
+		border-radius: 10px;
+		transition: all 0.2s;
+	}
+	#nav button:hover {
+		background-color: #fff8;
+		border-radius: 20px;
+	}
+	#nav button:disabled {
+		background: #fff;
+		border-radius: 20px;
+	}
+
+	#info {
+		background-color: rgba(255, 255, 255, 0.5);
+		margin: 0px 0px 20px auto;
+		width: fit-content;
+		border-radius: 20px;
+		padding: 17px 23px;
+	}
+	@media only screen and (max-width: 1000px) {
+		#info {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	.big-card {
+		color: #2d9cdb;
+		background-color: rgba(255, 255, 255, 0.5);
+		padding: 50px 75px;
+		border-radius: 20px;
+		position: relative;
+	}
+	.big-card h1 {
+		font-size: 100px;
+		font-weight: 700;
+		line-height: 85px;
+	}
+	@media only screen and (max-width: 620px) {
+		.big-card h1 {
+			font-size: 60px;
+			line-height: 55px;
+		}
+	}
+	.big-card p {
+		color: #000;
+	}
+	#hand-wave {
+		width: 150px;
+		height: 150px;
+		font-size: 150px;
+		opacity: 0.5;
+		position: absolute;
+		top: 20px;
+		right: 30px;
+	}
+
+	.cards {
+		margin: 25px 0px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 25px;
+	}
+	.small-card {
+		color: #2d9cdb;
+		background-color: #ffffff80;
+		box-shadow: 0 8px 19px 0px #00000000;
+		padding: 40px;
+		border-radius: 20px;
+		position: relative;
+		width: calc(50% - 12.5px);
+		transition: 0.2s all;
+		cursor: pointer;
+	}
+	@media only screen and (max-width: 895px) {
+		.cards {
+			flex-direction: column;
+		}
+		.small-card {
+			width: calc(100% - 12.5px);
+		}
+		.small-card h1 {
+			font-size: 40px;
+		}
+	}
+	.small-card:hover {
+		transform: translateY(-5px);
+		background-color: #ffffffaa;
+		box-shadow: 0 8px 19px 0px #dddddd66;
+	}
+	.small-card h1 {
+		font-size: 60px;
+		font-weight: 700;
+		text-align: left;
+		margin: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	@media only screen and (max-width: 1190px) {
+		.small-card h1 {
+			font-size: 40px;
+		}
+	}
+	.small-card i {
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+		opacity: 0.5;
+		position: absolute;
+		top: 20px;
+		right: 30px;
+	}
+}
