@@ -31,7 +31,12 @@
 		<meta name="twitter:image" content="../img/link.wal03preview.png" />
 
 		<style>
-
+			.lightimg {
+				display: none;
+			}
+			.darkimg {
+				display: none;
+			}
 			.cards {
 				flex-direction: wrap;
 			}
@@ -48,17 +53,22 @@
 					cursor: pointer;
 					font-weight: medium;
 				}
-				#ltt img {
-					filter: invert(1);
+				#ltt .img {
+					background-image:url(../img/icon_V6.png);
+					height: 60px;
+					margin: 0;
+					float: left;
+					width: 30px;
 			}
-			#mastodon img {
-				filter: invert(1);
+			.darkimg {
+				display: block;
 			}
 
 			#ltt:hover {
 					filter: brightness(0.5) hue-rotate(90);
 			}
 			}
+
 			@media only screen and (prefers-color-scheme: light) {
 				.contact-card {
 					color: #2d9cdb;
@@ -72,6 +82,9 @@
 					transition: 0.2s all, 0.4s background, 0.4s color;
 					cursor: pointer;
 				}
+				.lightimg {
+				display: block;
+			}
 			}
 			@media only screen and (max-width: 1211px) {
 				.contact-card {
@@ -200,19 +213,19 @@
 					<div class="contacti"><i class="fa-brands fa-wikipedia-w"></i><div class="contactxt">ikipedia</div> </div>
 					<br />
 				</button>
-				<button class="contact-card" id="github" title="look at my github" onclick="window.open('https://en.wikipedia.org/wiki/User:02es');">
+				<button class="contact-card" id="github" title="look at my github" onclick="window.open('https://github.com/wall03');">
 					<br />
 					<div class="contacti"><i class="fa-brands fa-github"></i><div class="contactxt">Github</div></div>
 					<br />
 				</button>
-				<button class="contact-card" id="ltt" title="me on the ltt forum" onclick="window.open('https://en.wikipedia.org/wiki/User:02es');">
+				<button class="contact-card" id="ltt" title="me on the ltt forum" onclick="window.open('https://linustechtips.com/profile/720852-wall03/');">
 					<br />
-					<div class="contacti"><img src="../img/icon_V6.png"><div class="contactxt">LTT Forum</div></div>
+					<div class="contacti"><img class="darkimg" src="../img/icon_V6.png"><img class="lightimg" src="../img/icon_V6light.png"><div class="contactxt">LTT Forum</div></div>
 					<br />
 				</button>
-				<button class="contact-card" id="mastodon" title="my mastodon acct." onclick="window.open('https://en.wikipedia.org/wiki/User:02es');">
+				<button class="contact-card" id="mastodon" title="my mastodon acct." onclick="window.open('https://urbanists.social/@wall03');">
 					<br />
-					<div class="contacti"><img src="../img/mastodon.png"><div class="contactxt">Mastodon</div></div>
+					<div class="contacti"><img class="darkimg" src="../img/mastodon.png"><img class="lightimg" src="../img/mastodonlight.png"><div class="contactxt">Mastodon</div></div>
 					<br />
 				</button>
 				<button class="contact-card" id="twitter" title="my twitter" onclick="window.open('https://twitter.com/not_wall03');">
