@@ -1,8 +1,23 @@
+@font-face {
+	font-family: Inter;
+	src: url(Inter\ Web/Inter-Regular.woff2);
+}
+
+@font-face {
+	font-family: Inter;
+	src: url(Inter\ Web/Inter-Bold.woff2);
+	font-weight: bold;
+}
+
+
+
 *,
 body,
 h1 {
-	font-family: "Inter";
+	font-family: Inter, sans-serif;
 }
+
+
 
 @media only screen and (prefers-color-scheme: dark) {
 	body {
@@ -38,6 +53,7 @@ h1 {
 		border-radius: 20px;
 		overflow: hidden;
 	}
+	
 	@media only screen and (max-width: 940px) {
 		#nav {
 			position: inherit;

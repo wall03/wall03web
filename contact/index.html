@@ -67,6 +67,10 @@
 			#ltt:hover {
 					filter: brightness(0.5) hue-rotate(90);
 			}
+
+			h2 {
+				color: #bce7ff;
+			}
 			}
 
 			@media only screen and (prefers-color-scheme: light) {
@@ -135,6 +139,20 @@
 				}
 			}
 
+			#osm:hover {
+				background-color: #82f569;
+				color: black;
+			}
+
+			#print:hover {
+				background-color: #ff5d00;
+				color: white;
+			}
+			#etsy:hover {
+				background-color: #ff5d00;
+				color: white;
+			}
+
 			#reddit:hover {
 				background-color: #ff4500;
 				color: white;
@@ -157,9 +175,13 @@
 			}
 			#mastodon:hover {
 				background: linear-gradient(180deg, rgba(99,100,255,1) 0%, rgba(86,58,204,1) 100%); 			
+				color: white;
 			}
 			#ltt:hover {
 				background: #DB4105; 
+			}
+			#steam:hover {
+				background: linear-gradient(160deg, #0370a4 0%, #121b2e 70%); 			
 			}
 
 			#hand-wave {
@@ -192,15 +214,11 @@
 				<h1>contact me<br />(don't be shy)</h1>
 				<i class="fa-duotone fa-address-card" id="hand-wave"></i>
 			</div>
+			<h2>Messaging</h2>
 			<div class="cards">
 				<button class="contact-card" id="email" title="email me" onclick="window.open('mailto:wall03@wall03.blue');">
 					<br />
 					<div class="contacti"><i class="fa-solid fa-envelope"></i> <div class="contactxt">email me</div> </div>
-					<br />
-				</button>
-				<button class="contact-card" id="reddit" title="my reddit account" onclick="window.open('https://www.reddit.com/user/not_wall03');">
-					<br />
-					<div class="contacti"><i class="fa-brands fa-reddit"></i> <div class="contactxt">Reddit</div> </div>
 					<br />
 				</button>
 				<button class="contact-card" id="discord" title="dm me on discord" onclick="window.open('https://discord.com/channels/@me/615153271794827296/');">
@@ -208,6 +226,7 @@
 					<div class="contacti"><i class="fa-brands fa-discord"></i> <div class="contactxt">Discord</div> </div>
 					<br />
 				</button>
+				</div><h2>Work</h2><div class="cards">
 				<button class="contact-card" id="wikipedia" title="look at my wikipedia profile" onclick="window.open('https://en.wikipedia.org/wiki/User:02es');">
 					<br />
 					<div class="contacti"><i class="fa-brands fa-wikipedia-w"></i><div class="contactxt">ikipedia</div> </div>
@@ -218,29 +237,74 @@
 					<div class="contacti"><i class="fa-brands fa-github"></i><div class="contactxt">Github</div></div>
 					<br />
 				</button>
+				<button class="contact-card" id="osm" title="me on open street maps" onclick="window.open('https://www.openstreetmap.org/user/wall03');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-map-pin"></i><div class="contactxt">OSM</div></div>
+					<br />
+				</button>
+				<button class="contact-card" id="print" title="printables" onclick="window.open('https://www.printables.com/@wall03_556316');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-cube"></i><div class="contactxt">Printables</div></div>
+					<br />
+			</button>
+			<button class="contact-card" id="etsy" title="my etsy shop" onclick="window.open('https://www.etsy.com/shop/CatThingsThatAreCute');">
+				<br />
+				<div class="contacti"><i class="fa-brands fa-etsy"></i><div class="contactxt">tsy</div></div>
+				<br />
+			</button>
+		</div><h2>Socials</h2>
+				<div class="cards">
+
+				<button class="contact-card" id="reddit" title="my reddit account" onclick="window.open('https://www.reddit.com/user/not_wall03');">
+					<br />
+					<div class="contacti"><i class="fa-brands fa-reddit"></i> <div class="contactxt">Reddit</div> </div>
+					<br />
+				</button>
+				<button class="contact-card" id="mastodon" title="my mastodon acct." onclick="window.open('https://urbanists.social/@wall03');">
+					<br />
+					<div class="contacti"><i class="fa-brands fa-mastodon"></i><div class="contactxt">Mastodon</div></div>
+					<br />
+				</button>
+				<button class="contact-card" id="twitter" title="my twitter" onclick="window.open('https://twitter.com/not_wall03');">
+					<br />
+					<div class="contacti"><i class="fa-brands fa-twitter"></i><div class="contactxt">Unused</div></div>
+					<br />
+				</button>
+			</div>
+			<h2>Gaming</h2><div class="cards">
+				<button class="contact-card" id="dnd" title="wotc account" onclick="window.open('https://www.dndbeyond.com/members/not_wall03/posts');">
+					<br />
+					<div class="contacti"><i class="fa-brands fa-wizards-of-the-coast"></i><div class="contactxt">WoTC</div></div>
+					<br />
+				</button>
+				<button class="contact-card" id="steam" title="steam account" onclick="window.open('https://steamcommunity.com/id/wall03/');">
+					<br />
+					<div class="contacti"><i class="fa-brands fa-steam"></i><div class="contactxt">Steam</div></div>
+					<br />
+				</button>
+			</div>
+			<h2>Forums</h2><div class="cards">
+				<button class="contact-card" id="bd" title="blu-ray account" onclick="window.open('https://www.blu-ray.com/community/profile.php?u=868085');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-compact-disc"></i><div class="contactxt">Blu-Ray</div></div>
+					<br />
+				</button>
 				<button class="contact-card" id="ltt" title="me on the ltt forum" onclick="window.open('https://linustechtips.com/profile/720852-wall03/');">
 					<br />
 					<div class="contacti"><img class="darkimg" src="../img/icon_V6.png"><img class="lightimg" src="../img/icon_V6light.png"><div class="contactxt">LTT Forum</div></div>
 					<br />
 				</button>
-				<button class="contact-card" id="mastodon" title="my mastodon acct." onclick="window.open('https://urbanists.social/@wall03');">
+				<button class="contact-card" id="ltt" title="Another Super Society" onclick="window.open('https://anothersupersociety.com/u/wall03/summary');">
 					<br />
-					<div class="contacti"><img class="darkimg" src="../img/mastodon.png"><img class="lightimg" src="../img/mastodonlight.png"><div class="contactxt">Mastodon</div></div>
-					<br />
-				</button>
-				<button class="contact-card" id="twitter" title="my twitter" onclick="window.open('https://twitter.com/not_wall03');">
-					<br />
-					<div class="contacti"><i class="fa-brands fa-twitter"></i><div class="contactxt">Twitter</div></div>
+					<div class="contacti"><i class="fa-solid fa-camera"></i><img class="lightimg" src="../img/icon_V6light.png"><div class="contactxt">Society</div></div>
 					<br />
 				</button>
 			</div>
 			<div class="big-card">
 				<p style="text-align: center">
-					copyright wall03 2022. licensed under the
-					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0 </a>
-					license.<br />
+					this is public domain work<br />
 					coded in collaboration with
-					<a href="https://github.com/ThePiGuy3141">Pi</a>
+					<a href="https://github.com/ThePiGuy3141">Pi</a><br />
 				</p>
 			</div>
 		</div>

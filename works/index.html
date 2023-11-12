@@ -33,13 +33,26 @@
 				.small-card-highlight {
 					background-color: #bce7ff;
 					color: #373b46;
-					padding: 40px;
+				}
+	}
+	@media only screen and (prefers-color-scheme: light) {
+				.small-card-highlight {
+					background-color: #2d9cdb;
+					color: white;
+
+				}
+				.small-card-highlight:hover {
+					background-color: #2d9cdb;
+				}
+	}
+
+	.small-card-highlight{
+		padding: 40px;
 					border-radius: 20px;
 					position: relative;
 					width: calc(50% - 12.5px);
 					transition: 0.2s all;
 					cursor: pointer;
-				}
 	}
 		</style>
 	</head>
@@ -65,18 +78,16 @@
 					<h1>hire me</h1>
 					<i class="fa-solid fa-arrow-right"></i>
 				</button>
-				<button class="small-card" onclick="window.location.href='../blog/';">
+				<button class="small-card" onclick="window.location.href='portfolio.html'">
 					<h1>my website portfolio</h1>
 					<i class="fa-solid fa-arrow-right"></i>
 				</button>
 			</div>
 			<div class="big-card">
 				<p style="text-align: center">
-					copyright wall03 2022. licensed under the
-					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0 </a>
-					license.<br />
+					this is public domain work<br />
 					coded in collaboration with
-					<a href="https://github.com/ThePiGuy3141">Pi</a>
+					<a href="https://github.com/ThePiGuy3141">Pi</a><br />
 				</p>
 			</div>
 		</div>
