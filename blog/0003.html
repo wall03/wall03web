@@ -1,43 +1,92 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>blog | wall03</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="../dark-style.css" />
+		<link rel="stylesheet" href="../light-style.css" />
+		<link rel="stylesheet" href="../fontawesome.css" />
 
-  <head>
-    <meta charset="utf-8">
-    <title>blog post | wall03</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='icon' href='../favicon.ico' type='image/x-icon'>
-    <link rel="stylesheet" href="../style.css">
-  </head>  
+		<!-- HTML Meta Tags -->
+		<title>blog | wall03</title>
+		<meta name="description" content="my blog, with happenings in my corner of the internet." />
 
-<body>
-  <p id="announcements">this website is open source. <a id="notblue" href="https://github.com/wall03/wall03web">download here</a></p>
-  <ul>
-    <li><a class="nohovr" href="../index.html"> home</a></li>
-    <li><a class="nohovr" href="../about.html"> about</a></li>
-    <li><a class="hvrovr" href="../blog.html"> blog</a></li>
-    <li><a class="nohovr" href="../contact.html"> contact</a></li>
-  </ul>
-  <div class="body1">
-  <h1 class="title">i somehow forgot about this website</h1>
-  <h6>march 7, 2021</h6>
-  well... uh... i forgot about this website for a little while...<br>
-  i have some excuses but i know you don't want to hear that.<br>
-  since i came back (2 days ago) i started <a href="../about.html#redesign2">a much-needed refresh</a> on this website's design.<br>
-  below you will find the new changes (you might have to scroll a bit more down.)</a>
-</div><br><br>
-<h2 id="projectheadder">changes</h2>
-<div id="project1" class="myprojects">
-  <strong>accent color</strong> <br>
-  you may have noticed that some elements around this website have started to look... blue. this is now the accent color.<br>
-</div>
-<div class="body2"><br>
-</div>
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://wall03.blue" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="blog | wall03" />
+		<meta property="og:description" content="my blog, with happenings in my corner of the internet." />
+		<meta property="og:image" content="https://i.imgur.com/WXNmQyJ.png" />
 
-  <br>
-  <div class="footnotes">
-    <p>&copy; 2021 wall03. all rights reserved.</p>
-    <p><a href="../index.html">home</a> | <a href="../about.html">about</a> | <a href="../blog.html">blog</a> | <a href="../contact.html">contact</a> | <a href="#announcements">&#8593;</a></p>
-</div>
-</body>
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="wall03.blue" />
+		<meta property="twitter:url" content="https://wall03.blue" />
+		<meta name="twitter:title" content="blog | wall03" />
+		<meta name="twitter:description" content="my blog, with happenings in my corner of the internet." />
+		<meta name="twitter:image" content="link.wal03preview.png" />
+		<style>
+			.blogimg {
+				width: 100%;
+				margin-bottom: 10px;
+				border-radius: 10px;
+			}
+
+			.small-card i {
+				top: auto;
+				bottom: 40px;
+				right: 40px;
+			}
+			p, h1, h2 {
+				margin: 30px;
+			}
+		
+			@media only screen and (prefers-color-scheme: dark) {
+				p, h1, h2{
+					color: #bce7ff;
+			}}
+			img {
+				width: 50%;
+				border-radius: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<button onclick="window.location.href='../';">home</button>
+			<button onclick="window.location.href='../about/';">about</button>
+			<button onclick="window.location.href='../works/';">works</button>
+			<button disabled>blog</button>
+			<button onclick="window.location.href='../contact/';">contact</button>
+		</div>
+		<div id="info">
+			<strong>announcements: </strong>this website is open source!
+			<a href="https://github.com/wall03/wall03web">more</a>
+		</div>
+		<div id="main">
+			<div class="big-card">
+				<h1>my self-hosting journey</h1>
+				<i class="fa-brands fa-creative-commons-pd" id="hand-wave"></i></div>
+			<h1>Howdy!</h1>
+				<p>It's been a hot minute. I've been hard at work at stuff like existing and things. Also I have a new update to this website, as well as a special announcement!</p>
+				<p>Well, I'd like to first acknowledge how this website has had some dead links and an incomplete page, which was recently brought to my attention by a friend of mine.</p>
+				<p>Over a month later, in peak wall fashion, I am finally finishing up my portfolio pages and updating things to make things more accurate and readying it for release! 
+					I was looking into making this website public domain (cause I don't really care about intellectual property), and I'm pretty sure I can just say that it is. 
+					I got consent from .pi, the wonderful helper who helped make the original update in April possible.</p>
+			<h1>What to Expect</h1>
+				<p>I'm hard at work on more epic projects/upgrades for this website including a hamburger menu and JavaScript tags for blog post sorting. 
+					I'm also going to import some old blog posts and hopefully get around to actually posting about life and school. More to come sometime soon. (hopefully)</p>
+				<div class="big-card">
+					<p style="text-align: center">
+						this is public domain work<br />
+						coded in collaboration with
+						<a href="https://github.com/ThePiGuy3141">Pi</a><br />
+					</p>
+				</div>
+		</div>
+	</body>
 </html>

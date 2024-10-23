@@ -12,13 +12,13 @@
 
 		<!-- HTML Meta Tags -->
 		<title>my portfolio | wall03</title>
-		<meta name="description" content="my blog, with happenings in my corner of the internet." />
+		<meta name="description" content="my portfolio, with works that I have worked on." />
 
 		<!-- Facebook Meta Tags -->
 		<meta property="og:url" content="https://wall03.blue" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="portfolio | wall03" />
-		<meta property="og:description" content="my blog, with happenings in my corner of the internet." />
+		<meta property="og:description" content="my portfolio, with works that I have worked on." />
 		<meta property="og:image" content="https://i.imgur.com/WXNmQyJ.png" />
 
 		<!-- Twitter Meta Tags -->
@@ -26,12 +26,12 @@
 		<meta property="twitter:domain" content="wall03.blue" />
 		<meta property="twitter:url" content="https://wall03.blue" />
 		<meta name="twitter:title" content="portfolio | wall03" />
-		<meta name="twitter:description" content="my blog, with happenings in my corner of the internet." />
+		<meta name="twitter:description" content="my portfolio, with works that I have worked on." />
 		<meta name="twitter:image" content="link.wal03preview.png" />
 		<style>
 			.blogimg {
-				height: 372px;
-				width: 508px;
+				width: 100%;
+				height: auto;
 				margin-bottom: 10px;
 				border-radius: 10px;
 				overflow: hidden;
@@ -39,10 +39,13 @@
 
 			.small-card i {
 				top: auto;
-				bottom: 40px;
+				bottom: 45px;
 				right: 40px;
 			}
 		
+			.small-card {
+				padding: 30px;
+			}
 		</style>
 	</head>
 	<body>
@@ -63,6 +66,12 @@
 				<i class="fa-duotone fa-typewriter" id="hand-wave"></i>
 			</div>
 			<div class="cards">
+				
+				<button class="small-card" onclick="window.location.href='0002.html';">
+					<img class="blogimg" src="../img/specs-blog.png">	<br>				
+					<h1>SPECS</h1>
+					<i class="fa-solid fa-arrow-right"></i>
+				</button>
 				<button class="small-card" onclick="window.location.href='0001.html';">
 					<img class="blogimg" src="../img/Screenshot 2023-04-30 at 16-28-19 The IT Club.png">	<br>				
 					<h1>The IT Club</h1>
