@@ -31,12 +31,7 @@
 		<meta name="twitter:image" content="../img/link.wal03preview.png" />
 
 		<style>
-			.lightimg {
-				display: none;
-			}
-			.darkimg {
-				display: none;
-			}
+
 			.cards {
 				flex-direction: wrap;
 			}
@@ -53,26 +48,21 @@
 					cursor: pointer;
 					font-weight: medium;
 				}
-				#ltt .img {
-					background-image:url(../img/icon_V6.png);
-					height: 60px;
-					margin: 0;
-					float: left;
-					width: 30px;
-			}
-			.darkimg {
-				display: block;
-			}
 
-			#ltt:hover {
-					filter: brightness(0.5) hue-rotate(90);
-			}
+			
+				.darkimg:hover {
+					filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(58deg) brightness(102%) contrast(100%);
+				}
 
 			h2 {
 				color: #bce7ff;
 			}
 			}
-
+			.contact-card:hover {
+				transform: translateY(-2px);
+				box-shadow: inset 0 8px 19px 0px #00000000, 0 8px 19px 0px #00000036;
+				color: white;
+			}
 			@media only screen and (prefers-color-scheme: light) {
 				.contact-card {
 					color: #2d9cdb;
@@ -86,8 +76,11 @@
 					transition: 0.2s all, 0.4s background, 0.4s color;
 					cursor: pointer;
 				}
-				.lightimg {
-				display: block;
+				.darkimg {
+					filter: brightness(0) saturate(100%) invert(52%) sepia(54%) saturate(842%) hue-rotate(164deg) brightness(93%) contrast(83%);
+			}
+			.contact-card:hover {
+				color: inherit;
 			}
 			}
 			@media only screen and (max-width: 1211px) {
@@ -101,10 +94,7 @@
 				float: right;
 				margin: 10px auto 0 35px;
 			}
-			.contact-card:hover {
-				transform: translateY(-2px);
-				box-shadow: inset 0 8px 19px 0px #00000000, 0 8px 19px 0px #00000036;
-			}
+
 			.contact-card h1 {
 				font-size: 60px;
 				font-weight: 700;
@@ -146,11 +136,9 @@
 
 			#print:hover {
 				background-color: #ff5d00;
-				color: white;
 			}
 			#etsy:hover {
 				background-color: #ff5d00;
-				color: white;
 			}
 
 			#reddit:hover {
@@ -159,7 +147,6 @@
 			}
 			#twitter:hover {
 				background-color: #1da1f2;
-				color: white;
 			}
 			#discord:hover {
 				background-color: #5865f2;
@@ -178,12 +165,17 @@
 				color: white;
 			}
 			#ltt:hover {
-				background: #DB4105; 
+				background: #DB4105;
+				color: white; 
 			}
 			#steam:hover {
 				background: linear-gradient(160deg, #0370a4 0%, #121b2e 70%); 			
+				color: white;
 			}
-
+			#ass:hover {
+				background:#35C435; 
+				color: black;
+			}
 			#hand-wave {
 				right: 50px;
 			}
@@ -226,7 +218,8 @@
 					<div class="contacti"><i class="fa-brands fa-discord"></i> <div class="contactxt">Discord</div> </div>
 					<br />
 				</button>
-				</div><h2>Work</h2><div class="cards">
+				</div>
+				<h2>Work</h2><div class="cards">
 				<button class="contact-card" id="wikipedia" title="look at my wikipedia profile" onclick="window.open('https://en.wikipedia.org/wiki/User:02es');">
 					<br />
 					<div class="contacti"><i class="fa-brands fa-wikipedia-w"></i><div class="contactxt">ikipedia</div> </div>
@@ -291,12 +284,34 @@
 				</button>
 				<button class="contact-card" id="ltt" title="me on the ltt forum" onclick="window.open('https://linustechtips.com/profile/720852-wall03/');">
 					<br />
-					<div class="contacti"><img class="darkimg" src="../img/icon_V6.png"><img class="lightimg" src="../img/icon_V6light.png"><div class="contactxt">LTT Forum</div></div>
+					<div class="contacti"><img class="darkimg" src="../img/icon_V6.png"><div class="contactxt">LTT Forum</div></div>
 					<br />
 				</button>
-				<button class="contact-card" id="ltt" title="Another Super Society" onclick="window.open('https://anothersupersociety.com/u/wall03/summary');">
+				<button class="contact-card" id="ass" title="Another Super Society" onclick="window.open('https://anothersupersociety.com/u/wall03/summary');">
 					<br />
-					<div class="contacti"><i class="fa-solid fa-camera"></i><img class="lightimg" src="../img/icon_V6light.png"><div class="contactxt">Society</div></div>
+					<div class="contacti"><i class="fa-solid fa-camera"></i><div class="contactxt">Society</div></div>
+					<br />
+				</button>
+		</div>
+				<h2>Other cool people</h2><div class="cards">
+				<button class="contact-card" id="oli" title="Oliver hosts this website" onclick="window.open('https://twidilers.com/');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-user-tie"></i><div class="contactxt">Oliver</div></div>
+					<br />
+				</button>
+				<button class="contact-card" id="derin" title="Just a cool guy" onclick="window.open('http://derin.twidilers.com/');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-user-secret"></i><div class="contactxt">Derin</div></div>
+					<br />
+				</button>
+				<button class="contact-card" id="harola" title="Internet friend. Inspiration for this website" onclick="window.open('https://haroleethan.studio.site/');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-user"></i><div class="contactxt">Harola</div></div>
+					<br />
+				</button>
+				<button class="contact-card" id="pi" title="Helped write this website" onclick="window.open('https://haroleethan.studio.site/');">
+					<br />
+					<div class="contacti"><i class="fa-solid fa-user-astronaut"></i><div class="contactxt">.pi</div></div>
 					<br />
 				</button>
 			</div>
