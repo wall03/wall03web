@@ -108,6 +108,10 @@
 		flex-wrap: wrap;
 		gap: 25px;
 	}
+	h2 {
+		color: #2d9cdb;
+
+	}
 	.small-card,  .small-card-highlight {
 		color: #2d9cdb;
 		background-color: #ffffff80;

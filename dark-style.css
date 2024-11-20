@@ -1,15 +1,25 @@
 @font-face {
-	font-family: Inter;
-	src: url(Inter\ Web/Inter-Regular.woff2);
-}
+    font-family: Inter;
+    src: url(font/Inter-Regular-slnt=0.ttf);
+  }
 
-@font-face {
-	font-family: Inter;
-	src: url(Inter\ Web/Inter-Bold.woff2);
-	font-weight: bold;
-}
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-Bold-slnt=0.ttf);
+    font-weight: bold;
+  }
 
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-Medium-slnt=0.ttf);
+    font-weight: 500;
+  }
 
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-SemiBold-slnt=0.ttf);
+    font-weight: 600;
+  }
 
 *,
 body,
@@ -18,18 +28,57 @@ h1 {
 }
 
 
-
+.rss2html-embed-item-body {
+font-weight: normal;
+font-size: 1em;
+padding: 25px;
+width: 770px;
+margin-bottom: 20px;
+}	
+.feed {
+width: 100%;
+justify-items: center;
+}
+img {
+width: 100%;
+border-radius:10px;
+}	
+@media only screen and (prefers-color-scheme: light) {
+.rss2html-embed-item-body {
+color: #2d9cdb !important;
+background-color: #ffffff80;
+box-shadow: 0 8px 19px 0px #00000000;
+font-weight: bold;
+border-radius: 20px;
+position: relative;
+cursor: pointer;
+}}
 @media only screen and (prefers-color-scheme: dark) {
+.rss2html-embed-item-body {
+background-color: #5b708877;
+box-shadow: inset 0 8px 19px 0px #00000036, 0 8px 19px 0px #00000000;
+color: #bce7ff !important;
+border-radius: 20px;
+position: relative;
+cursor: pointer;
+font-weight: medium;
+}}
+@media only screen and (max-width: 1240px) {
+	body {
+		margin: 20px;
+	}
+}
+@media only screen and (prefers-color-scheme: dark) {
+	 body{
+		color: #bce7ff;
+
+	}
 	body {
 		background: #373b46;
 		max-width: 1200px;
 		margin: 20px auto;
 	}
-	@media only screen and (max-width: 1240px) {
-		body {
-			margin: 20px;
-		}
-	}
+
 	button {
 		outline: none;
 		border: none;
@@ -52,6 +101,11 @@ h1 {
 		top: 20px;
 		border-radius: 20px;
 		overflow: hidden;
+	}
+
+	h2 {
+		color: #bce7ff;
+
 	}
 	
 	@media only screen and (max-width: 940px) {
@@ -140,7 +194,7 @@ h1 {
 		flex-wrap: wrap;
 		gap: 25px;
 	}
-	.small-card, .small-card-highlight {
+	.small-card, .small-card-highlight, .feed-item {
 		background-color: #5b708877;
 		box-shadow: inset 0 8px 19px 0px #00000036, 0 8px 19px 0px #00000000;
 		color: #bce7ff;

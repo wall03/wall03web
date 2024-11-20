@@ -35,8 +35,8 @@
       background-color: #BAE2FF;
     }
 
-    p {
-      color: black;
+    p, h1, h2, h3 {
+      color: var(--accent-color);
     }
     
     a {
@@ -59,6 +59,9 @@
       right: 30px;
     }
 
+    .big-card {
+      width: 100% !important;
+    }
     ::selection {
       background: #09121d;
       text-shadow: none;
@@ -235,6 +238,7 @@
       line-height: 55px;
       margin: 50px 0px;
     }
+    
 
     @media only screen and (max-width: 1300px) {
       html {
@@ -295,12 +299,34 @@
         display: none;
       }
     }
+    
+    @media only screen and (max-width: 450px) {
+      html  {
+        width: auto;
+      }
+
+      #cards, #cards2 {
+        width: 100%;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .cardtext {
+        font-size: 1.4em;
+        width: 450px;
+      }
+    }
 
 
     @media only screen and (prefers-color-scheme: dark) {
       html {
         color: white !important;
         background-color: #373B46;
+      }
+      h1 {
+        color: #BCE7FF;
       }
       
       .card, .ccard {
@@ -317,10 +343,6 @@
 
       a {
         color: rgb(102, 168, 255);
-      }
-
-      p {
-        color: #BCE7FF;
       }
 
       .footnotes {
