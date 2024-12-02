@@ -1,0 +1,207 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head>
+		 <meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		 <title>Mastodon | wall03</title> 
+		 <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+		 <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+		 <link rel="stylesheet" href="../dark-style.css" />
+		 <link rel="stylesheet" href="../light-style.css" />
+		 <link rel="stylesheet" href="../fontawesome.css" />
+		 <!-- HTML Meta Tags -->
+		<meta name="description" content="information and posts by wall03's masotdon account" />
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://wall03.blue" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="mastodon | wall03" />
+		<meta property="og:description" content="information and posts by wall03's masotdon account" />
+		<meta property="og:image" content="https://i.imgur.com/WXNmQyJ.png" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="wall03.blue" />
+		<meta property="twitter:url" content="https://wall03.blue" />
+		<meta name="twitter:title" content="mastodon | wall03" />
+		<meta name="twitter:description" content="information and posts by wall03's masotdon account" />
+		<meta name="twitter:image" content="link.wal03preview.png" />
+		 <style>
+			#followers, #status {
+				font-size: 4em;
+				font-weight: bold;
+			}
+			#note {
+				font-size: 1.5em;
+				font-weight: normal;
+			}
+			h2 {
+				font-size: 2em;
+				font-weight: normal;
+			}
+			.bold {
+				font-weight: bold;
+			}
+			.small-card {
+				padding:20px !important;
+			}
+			h1 {
+				font-size: 5em;
+				text-align: left;
+				margin-left: 0;
+			}
+
+			.feed-item {
+				width: 700px;
+            	padding: 10px 20px 20px 20px;
+				margin-bottom: 20px;
+        	}
+
+       		.feed-item .poll {
+            	margin-top: 10px;
+				box-shadow: inset 0 8px 19px 0px #00000036;
+				color: white;
+				background-color: #66a8ff;
+            	padding: 20px;
+            	border-radius: 10px;
+				margin-bottom: 10px;
+        	}
+			.feed-item .poll-option {
+            margin: 5px 0;
+        }
+        .feed-item .poll-bar {
+            height: 25px;
+            border-radius: 5px;
+            margin-top: 5px;
+            background-color: #ddd;
+        }
+        .feed-item .poll-bar-inner {
+            height: 100%;
+            border-radius: 5px;
+        }
+
+       		#reload-btn {
+				padding: 20px 40px;
+            	margin: 20px 0;
+            	background-color: #66a8ff;
+            	color: white;
+            	border: none;
+            	cursor: pointer;
+            	border-radius: 20px;
+				font-size: 2em;
+				float: right;
+		    }
+			img {
+				margin-bottom: 5px;
+			}
+		 </style>
+				</head> 
+	<body> 
+		<div id="nav">
+			<button onclick="window.location.href='../';">home</button>
+			<button onclick="window.location.href='../about/';">about</button>
+			<button onclick="window.location.href='../works/';">works</button>
+			<button onclick="window.location.href='../blog/';">blog</button>
+			<button disabled>contact</button>
+
+		</div>
+		<div id="info">
+			<strong>announcements: </strong>this website is open source!
+			<a href="https://github.com/wall03/wall03web">more</a>
+		</div>
+		<div class="main">
+			<div class="big-card">
+				<a href="https://urbanists.social/@wall03"><h1>mastodon account</h1></a>
+				<i class="fa-brands fa-mastodon" id="hand-wave"></i>
+			</div>
+		<div class='cards'>
+			<button class="long-card">
+				<h2 class="bold">Biography</h2> 
+				<div id="note">Loading...</div> 
+				<script> 
+async function fetchNote() { 
+    try { 
+        const response = await fetch('https://urbanists.social/api/v1/accounts/lookup?acct=wall03'); // Replace 'YOUR_URL_HERE' with the actual URL 
+        if (!response.ok) { 
+            throw new Error(`HTTP error! status: ${response.status}`);
+        } 
+        const data = await response.json(); 
+        const txt = data.note;
+        // Strip HTML tags
+        const strippedText = txt.replace(/<\/?[^>]+(>|$)/g, "");
+        document.getElementById('note').textContent = strippedText;
+    } 
+    catch (error) { 
+        console.error('Error fetching last note:', error); 
+        document.getElementById('note').textContent = 'Error loading last note'; 
+    } 
+} 
+fetchNote();
+
+					</script>
+			</button>
+			<button class="small-card">
+				<h2>Followers:</h2> 
+				<div id="followers">Loading...</div> 
+				<script> 
+					async function fetchFollowers() { 
+						try { 
+							const response = await fetch('https://urbanists.social/api/v1/accounts/lookup?acct=wall03'); // Replace 'YOUR_URL_HERE' with the actual URL 
+							if (!response.ok) { 
+								throw new Error(`HTTP error! status: ${response.followers_count}`); 
+								} 
+							const data = await response.json(); 
+							document.getElementById('followers').textContent = `${data.followers_count}`; 
+							} 
+							catch (error) { 
+								console.error('Error fetching followers:', error); 
+								document.getElementById('followers_count').textContent = 'Error loading followers count'; 
+								} } 
+								fetchFollowers(); 
+					</script>
+			</button>
+			<button class="small-card" onclick="window.location.href='https://urbanists.social/@wall03';">
+				<h2>Last post:</h2> 
+				<div id="status">Loading...</div> 
+				<script> 
+					async function fetchLastStatus() { 
+						try { 
+							const response = await fetch('https://urbanists.social/api/v1/accounts/lookup?acct=wall03'); // Replace 'YOUR_URL_HERE' with the actual URL 
+							if (!response.ok) { 
+								throw new Error(`HTTP error! status: ${response.status}`); 
+								} 
+							const data = await response.json(); 
+							document.getElementById('status').textContent = `${data.last_status_at}`; 
+							} 
+							catch (error) { 
+								console.error('Error fetching last status:', error); 
+								document.getElementById('status').textContent = 'Error loading last status'; 
+								} } 
+								fetchLastStatus(); 
+					</script>
+			</button>
+		</div> <div class="feed"><button id="reload-btn"><i class="fa-solid fa-rotate-right"></i></button>
+		<h1>The Feed</h1> 
+		<div id="feed">
+			<h2>Loading...</h2>
+			<p>If this takes a while, there might be something wrong.</p>
+			<ul>
+				<li>You might be disconnected from the internet</li>
+				<li>There might be an error with my code</li>
+				<li>Mastodon might</li>
+			</ul>
+		</div>
+		<script>console.log('If you are seeing this, mastodon.js is properly hooked up to mastodon.html!');
+		</script>
+		<script src="mastodon.js">
+
+		</script></div>
+	<div class="big-card">
+		<p style="text-align: center">
+            this is public domain work<br />
+            coded in collaboration with
+            <a href="https://GitHub.com/ItsPi3141/">Pi</a> and <a href="https://twidilers.com/">Oliver</a><br />
+        </p>
+	</div>
+	</body> 
+		</html>

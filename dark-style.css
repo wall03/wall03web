@@ -1,15 +1,25 @@
 @font-face {
-	font-family: Inter;
-	src: url(Inter\ Web/Inter-Regular.woff2);
-}
+    font-family: Inter;
+    src: url(font/Inter-Regular.woff2);
+  }
 
-@font-face {
-	font-family: Inter;
-	src: url(Inter\ Web/Inter-Bold.woff2);
-	font-weight: bold;
-}
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-Bold.woff2);
+    font-weight: bold;
+  }
 
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-Medium.woff2);
+    font-weight: 500;
+  }
 
+  @font-face {
+    font-family: Inter;
+    src: url(font/Inter-SemiBold.woff2);
+    font-weight: 600;
+  }
 
 *,
 body,
@@ -17,19 +27,27 @@ h1 {
 	font-family: Inter, sans-serif;
 }
 
-
+	
+.feed {
+	width: 100%;
+	justify-items: center;
+}
+img {
+	width: 100%;
+	border-radius:10px;
+}	
 
 @media only screen and (prefers-color-scheme: dark) {
+	 body{
+		color: #bce7ff;
+
+	}
 	body {
 		background: #373b46;
 		max-width: 1200px;
 		margin: 20px auto;
 	}
-	@media only screen and (max-width: 1240px) {
-		body {
-			margin: 20px;
-		}
-	}
+
 	button {
 		outline: none;
 		border: none;
@@ -52,6 +70,42 @@ h1 {
 		top: 20px;
 		border-radius: 20px;
 		overflow: hidden;
+	}
+
+	h2 {
+		color: #bce7ff;
+
+	}
+	
+	.small-card, .small-card-highlight, .feed-item {
+		background-color: #5b708877;
+		box-shadow: inset 0 8px 19px 0px #00000036, 0 8px 19px 0px #00000000;
+		color: #bce7ff;
+		padding: 40px;
+		border-radius: 20px;
+		position: relative;
+		width: calc(50% - 12.5px);
+		transition: 0.2s all;
+		cursor: pointer;
+	}
+
+
+	.long-card {
+		background-color: #5b708877;
+		box-shadow: inset 0 8px 19px 0px #00000036, 0 8px 19px 0px #00000000;
+		color: #bce7ff;
+		padding: 40px;
+		border-radius: 20px;
+		position: relative;
+		width: 100%;
+		transition: 0.2s all;
+		text-align: left;
+		font-size: 1em;
+	}
+
+	.large-title {
+		font-size: 4em;
+		margin: 0px;
 	}
 	
 	@media only screen and (max-width: 940px) {
@@ -103,7 +157,7 @@ h1 {
 		padding: 50px 75px;
 		border-radius: 20px;
 		position: relative;
-	}
+	}}
 	.big-card h1 {
 		font-size: 100px;
 		font-weight: 700;
@@ -119,11 +173,11 @@ h1 {
 			padding-left: 40px;
 		}
 
-		#hand-wave {
+		.big-card i {
 			visibility: hidden;
 		}
 	}
-	#hand-wave {
+	.big-card i {
 		width: 150px;
 		height: 150px;
 		font-size: 150px;
@@ -139,36 +193,6 @@ h1 {
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 25px;
-	}
-	.small-card, .small-card-highlight {
-		background-color: #5b708877;
-		box-shadow: inset 0 8px 19px 0px #00000036, 0 8px 19px 0px #00000000;
-		color: #bce7ff;
-		padding: 40px;
-		border-radius: 20px;
-		position: relative;
-		width: calc(50% - 12.5px);
-		transition: 0.2s all;
-		cursor: pointer;
-	}
-
-
-	.long-card {
-		background-color: #5b708877;
-		box-shadow: inset 0 8px 19px 0px #00000036, 0 8px 19px 0px #00000000;
-		color: #bce7ff;
-		padding: 40px;
-		border-radius: 20px;
-		position: relative;
-		width: 100%;
-		transition: 0.2s all;
-		text-align: left;
-		font-size: 1em;
-	}
-
-	.large-title {
-		font-size: 4em;
-		margin: 0px;
 	}
 	@media only screen and (max-width: 895px) {
 		.cards:not(:first-child(.cards .contact-card)) {
@@ -211,4 +235,3 @@ h1 {
 		top: 20px;
 		right: 30px;
 	}
-}

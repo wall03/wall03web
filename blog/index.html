@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="../light-style.css" />
 		<link rel="stylesheet" href="../fontawesome.css" />
 
+
 		<!-- HTML Meta Tags -->
 		<title>blog | wall03</title>
 		<meta name="description" content="my blog, with happenings in my corner of the internet." />
@@ -30,41 +31,55 @@
 		<meta name="twitter:description" content="my blog, with happenings in my corner of the internet." />
 		<meta name="twitter:image" content="link.wal03preview.png" />
 		<style>
-			.blogimg {
-				width: 100%;
-				margin-bottom: 10px;
-				border-radius: 10px;
-			}
-
-			.small-card i {
-				top: auto;
-				bottom: 40px;
-				right: 40px;
-			}
+.blogimg {
+		width: 100%;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		font-size: 40px;
+	}
+	.small-card {
+		padding: 30px;
+	}
+	.small-card i {
+		top: auto;
+		bottom: 70px;
+		right: 40px;
 		
-			.blogimg {
-				width: 100%;
-				margin-bottom: 10px;
-				border-radius: 10px;
-			}
+	}
+	p, h1, h2 {
+		margin: 30px;
+	}
 
-			.small-card i {
-				top: auto;
-				bottom: 40px;
-				right: 40px;
-			}
-			p, h1, h2 {
-				margin: 30px;
-			}
-		
-			@media only screen and (prefers-color-scheme: dark) {
-				p, h1, h2{
-					color: #bce7ff;
-			}}
-			img {
-				width: 50%;
-				border-radius: 20px;
-			}
+	.small-card h1 {
+		margin-bottom: 10px;
+				}
+	.desc {
+		font-size: 1.5em;
+		text-align: right;
+		width: fit-content;
+	}
+	.time {
+		background-color: #2d9cdb;
+		color: #bae2ff;
+		width: fit-content;
+		padding: 5px;
+		border-radius: 5px;
+		text-align: left;
+		float: right;
+		font-size: 1em;
+		top: auto;
+		bottom: 30px;
+		right: 40px;
+		position: absolute;
+
+	}
+	@media only screen and (prefers-color-scheme: dark) {
+		.time {
+			background-color: #bce7ff;
+			color: #373b46;
+		}
+	}
+</style>
 		</style>
 	</head>
 	<body>
@@ -84,30 +99,26 @@
 				<h1>this is my stream<br />of consciousness</h1>
 				<i class="fa-duotone fa-typewriter" id="hand-wave"></i>
 			</div>
-			<div class="cards">
-				<button class="small-card" onclick="window.location.href='0002.html';">
-					<img class="blogimg" src="../img/pd.png">	<br>				
-					<h1>self-hosting this website</h1>
-					<i class="fa-solid fa-arrow-right"></i>
-				</button>
-				<button class="small-card" onclick="window.location.href='0002.html';">
-					<img class="blogimg" src="../img/pd.png">	<br>				
-					<h1>this is public domain</h1>
-					<i class="fa-solid fa-arrow-right"></i>
-				</button>
-				<button class="small-card" onclick="window.location.href='0001.html';">
-					<img class="blogimg" src="../img/blog1.jpg">	<br>				
-					<h1>it's redesign time :)</h1>
-					<i class="fa-solid fa-arrow-right"></i>
-				</button>
+			<div class="cards" id="blogfeed">
+				{% if blogs %}
+					{% for blog in blogs %}
+						<button class="small-card" onclick="window.location.href='{{ blog.id }}.html';">
+						<img class="blogimg" src="{{ blog.imagePath }}"><br>				
+						<h1>{{ blog.title }}</h1>
+						<i class="fa-solid fa-arrow-right"></i>
+						<div class="desc">{{ blog.description }}</div>
+						<div class="time">{{ blog.date }}</div>
+					{% endfor %}
+				{% else %}
+					<p>No Blogs :(</p>
+				{% endif %}
 			</div>
 			<div class="big-card">
 				<p style="text-align: center">
 					this is public domain work<br />
 					coded in collaboration with
-					<a href="https://github.com/ThePiGuy3141">Pi</a><br />
+					<a href="https://GitHub.com/ItsPi3141/">Pi</a> and <a href="https://twidilers.com/">Oliver</a><br />
 				</p>
 			</div>
-		</div>
 	</body>
 </html>

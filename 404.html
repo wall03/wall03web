@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>404 | wall03</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="dark-style.css" />
+		<link rel="stylesheet" href="light-style.css" />
+		<link rel="stylesheet" href="fontawesome.css" />
+        <style>
+            .small-card {
+                width: 100%;
+            }
+			@media only screen and (prefers-color-scheme: dark) {
+				.small-card {
+					background-color: #bce7ff;
+					color: #373b46;
+				}
+	        }
+	        @media only screen and (prefers-color-scheme: light) {
+				.small-card {
+					background-color: #2d9cdb;
+					color: white;
+
+				}
+				.small-card:hover {
+					background-color: #2d9cdb;
+				}
+	        }
+        </style>
+	</head>
+	<body>
+		<div id="nav">
+			<button disabled>home</button>
+			<button onclick="window.location.href='about/';">about</button>
+			<button onclick="window.location.href='works/';">works</button>
+			<button onclick="window.location.href='blog/';">blog</button>
+			<button onclick="window.location.href='contact/';">contact</button>
+		</div>
+		<div id="info">
+			<strong>announcements: </strong>this website is open source!
+			<a href="https://github.com/wall03/wall03web">more</a>
+		</div>
+		<div id="main">
+			<div class="big-card">
+				<h1>404<br />url not found</h1>
+				<i class="fa-solid fa-triangle-exclamation" id="hand-wave"></i>
+			</div>
+            <div class="cards">
+				<button class="small-card" onclick="window.location.href='index.html';">
+					<h1>Return to home</h1>
+					<i class="fa-solid fa-arrow-right"></i>
+                </button>
+                </div>
+			<div class="big-card">
+				<p style="text-align: center">
+					this is public domain work<br />
+					coded in collaboration with
+					<a href="https://GitHub.com/ItsPi3141/">Pi</a> and <a href="https://twidilers.com/">Oliver</a><br />
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
