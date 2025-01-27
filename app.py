@@ -4,6 +4,7 @@ import datetime
 from zoneinfo import ZoneInfo
 import os
 import werkzeug
+from dotenv import load_dotenv
 
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -12,6 +13,7 @@ from sqlalchemy import DateTime
 
 template_dir = os.path.abspath('.')
 app = Flask(__name__,template_folder=template_dir)
+load_dotenv()
 
 class Base(DeclarativeBase):
     pass
@@ -58,6 +60,17 @@ def write_blog():
     db.session.commit()
     return redirect('/')
 
+@app.post('/blog/nothing.html')
+def checkAccount():
+    password = request.form.get('password')
+    # Retrieve the password from environment variables
+    correct_password = os.getenv('PASSWORD')
+    
+    if password == correct_password:
+        return render_template('/blog/post.html')
+    else:
+        return redirect('/')
+
 @app.route('/blog/')
 def blog_page():
     blogs = db.session.execute(db.select(Blogs).order_by(Blogs.date.desc())).scalars()
@@ -69,6 +82,10 @@ def renderBlog(blogid):
         return render_template('blog/nothing.html')
     blog = db.get_or_404(Blogs, blogid)
     return render_template('blog/0000.html',blog=blog)
+
+@app.route('/blog/post.html')
+def redirect_login():
+    return render_template('blog/nothing.html')
 
 @app.route("/<path:name>")
 def download_file(name):

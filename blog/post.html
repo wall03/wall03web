@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Login | wall03</title>
+
+        <link rel="stylesheet" href="../dark-style.css" />
+        <link rel="stylesheet" href="../light-style.css" />
+        <style>
+            input {
+                padding: 10px;
+                background-color: #5b708877;
+                color: #bce7ff;
+                border-radius: 10px;
+                width: 200px;
+                height: 30px;
+                margin: 5px 0;
+                border-width: 0;
+            }
+            form {
+                margin: auto;
+                width: fit-content;
+                color: #bce7ff;
+
+            }
+            button {
+                padding: 17px;
+                background-color: #5b708877;
+                color: #bce7ff;
+                border-radius: 10px;
+                margin: 10px 0;
+                font-weight: bold;
+            }
+            textarea {
+                padding: 10px;
+                background-color: #5b708877;
+                color: #bce7ff;
+                border-radius: 10px;
+                width: 100%;
+                height: 400px;
+                margin: 5px 0;
+                border-width: 0;
+            }
+        </style>
+</head>
+<body>
+    <form id="successForm" method="post" action="/write_blog" style="display: none;"><br>
+        <input id="title" name="title" placeholder="Title" required>
+        <input id="imglink" name="imglink" placeholder="Image Link" required>
+        <input id="desc" name="desc" placeholder="Description" required><br>
+        <textarea id="content" name="content" placeholder="paste in the html here"></textarea>
+        <button type="submit">Submit Blog</button>
+    </form>
+</body>
+</html>

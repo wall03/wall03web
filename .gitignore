@@ -1,1 +1,10 @@
-/blog/nothing.html
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+
+# Ignore the .env file
+.env
