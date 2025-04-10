@@ -8,3 +8,7 @@ env/
 
 # Ignore the .env file
 .env
+
+#Postgres Data
+
+pData

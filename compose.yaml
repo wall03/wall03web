@@ -1,0 +1,30 @@
+# the developer compose file
+services:
+  web: #the website
+    build: . #Build current directory
+    command: [ "flask", "--debug", "--app", "wall03web:app", "run","--host=0.0.0.0" ] #Run the flask developer command
+    environment:
+      - FLASK_SQLALCHEMY_DATABASE_URI=postgresql://postgres:postgres@db:5432/db #The url for the database in the flask app
+    depends_on: #A healthy database
+      db:
+        condition: service_healthy 
+    links: # not required but links it to the db
+      - db
+    ports: # map to port 80 for ease of connecting
+      - 80:5000
+    volumes:
+      - ./:/app # links the current directory so the flask auto-reloader works at run-time
+  db: #The database
+    image: postgres #pull from most recent postgres
+    volumes:
+      - ./pData:/var/lib/postgresql/data #Link the postgres data to the pData directory for data persistence accross containers
+    environment: #some postgres-specific env vars
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=db
+    healthcheck: #tells the website whether the database is ready to startup
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s #How often to check
+      timeout: 10s #How long it has to respond
+      retries: 10 #How many retries it has
+      start_period: 1s #The delay after starting to check

@@ -1,0 +1,14 @@
+[project]
+name = "wall03web"
+dependencies = [
+    "flask",
+    "Flask-SQLAlchemy",
+    "python-dotenv",
+    "psycopg2",
+]
+version='1.0'
+description="Wall03's website"
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

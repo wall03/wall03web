@@ -11,15 +11,16 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy import DateTime
 
-template_dir = os.path.abspath('.')
+template_dir = os.path.abspath('./wall03web')
 app = Flask(__name__,template_folder=template_dir)
 load_dotenv()
+app.config.from_prefixed_env()
 
 class Base(DeclarativeBase):
     pass
 
 db = SQLAlchemy(model_class=Base)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI")
+app.config["SQLALCHEMY_DATABASE_URI"] = app.config["SQLALCHEMY_DATABASE_URI"]
 db.init_app(app)
 
 class Blogs(db.Model):
@@ -64,7 +65,7 @@ def write_blog():
 def checkAccount():
     password = request.form.get('password')
     # Retrieve the password from environment variables
-    correct_password = os.getenv('PASSWORD')
+    correct_password = app.config["PASSWORD"]
     
     if password == correct_password:
         return render_template('blog/post.html')
