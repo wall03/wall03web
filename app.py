@@ -19,7 +19,7 @@ class Base(DeclarativeBase):
     pass
 
 db = SQLAlchemy(model_class=Base)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://wall03:wall03@twidilers.com:5432/wall03web"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI")
 db.init_app(app)
 
 class Blogs(db.Model):
@@ -67,7 +67,7 @@ def checkAccount():
     correct_password = os.getenv('PASSWORD')
     
     if password == correct_password:
-        return render_template('/blog/post.html')
+        return render_template('blog/post.html')
     else:
         return redirect('/')
 
