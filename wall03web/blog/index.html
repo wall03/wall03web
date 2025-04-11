@@ -107,7 +107,8 @@
 						<h1>{{ blog.title }}</h1>
 						<i class="fa-solid fa-arrow-right"></i>
 						<div class="desc">{{ blog.description }}</div>
-						<div class="time">{{ blog.date }}</div>
+						<div class="time" id="date{{ loop.index0 }}"></div>
+						<script> time = new Date({{ blog.date.timestamp() *1000 }}); document.getElementById("date{{ loop.index0 }}").innerHTML = time.toLocaleString() </script>
 					{% endfor %}
 				{% else %}
 					<p>No Blogs 😔</p>

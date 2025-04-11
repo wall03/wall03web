@@ -5,6 +5,7 @@ dependencies = [
     "Flask-SQLAlchemy",
     "python-dotenv",
     "psycopg2",
+    "flask-migrate"
 ]
 version='1.0'
 description="Wall03's website"

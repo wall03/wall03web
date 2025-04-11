@@ -11,6 +11,8 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy import DateTime
 
+from flask_migrate import Migrate
+
 template_dir = os.path.abspath('./wall03web')
 app = Flask(__name__,template_folder=template_dir)
 load_dotenv()
@@ -98,3 +100,4 @@ def download_file(name):
 @app.errorhandler(404)
 def error(error):
     return flask.send_file('404.html'), 404
+
