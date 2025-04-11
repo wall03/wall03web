@@ -27,4 +27,4 @@ services:
       interval: 3s #How often to check
       timeout: 10s #How long it has to respond
       retries: 10 #How many retries it has
-      start_period: 1s #The delay after starting to check
+      start_period: 3s #The delay after starting to check

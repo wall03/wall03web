@@ -30,7 +30,6 @@ class Blogs(db.Model):
     icon: Mapped[dict] = mapped_column(JSONB, nullable=True)
     content: Mapped[str] = mapped_column(nullable=True)
     imagePath: Mapped[str] = mapped_column(nullable=True)
-    author: Mapped[str] = mapped_column(nullable=False)
     description: Mapped[str] = mapped_column()
     date: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=datetime.datetime.now(datetime.timezone.utc),nullable=True)
 
@@ -52,7 +51,6 @@ def write_blog():
         content=request.form.get('content'),
         imagePath=request.form.get('imglink'),
         description=request.form.get('desc'),
-        author=request.form.get('author'),
         title=request.form.get('title'),
         date=datetime.datetime.now(datetime.timezone.utc),
         icon=request.form.get('icon')
